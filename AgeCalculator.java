@@ -27,14 +27,12 @@ public class AgeCalculator extends JFrame {
     static final Color NIGHT_ACCENT  = new Color(0x9D4EDD);
     static final Color DAY_BTN       = new Color(0xFF6B35);
     static final Color NIGHT_BTN     = new Color(0x7B2FBE);
-
     // ── State ─────────────────────────────────────────────────────────────────
     boolean isNightMode = false;
     float   animProgress = 0f;
     int     pulseAngle   = 0;
     List<String[]> history = new ArrayList<>();
     static final String DATA_FILE = System.getProperty("user.home") + "/age_calculator_data.csv";
-
     // ── UI components ─────────────────────────────────────────────────────────
     JPanel     bgPanel;
     JPanel     cardPanel;
