@@ -13,9 +13,7 @@ import java.util.List;
 import java.util.Timer;
 import java.io.*;
 import java.nio.file.*;
-
 public class AgeCalculator extends JFrame {
-
     // ── Theme colors ──────────────────────────────────────────────────────────
     static final Color[] DAY_BG      = {new Color(0xFF6B6B), new Color(0xFFA07A),
                                         new Color(0xFFD700), new Color(0x98FB98)};
