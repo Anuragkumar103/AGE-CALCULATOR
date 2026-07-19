@@ -145,7 +145,6 @@ public class AgeCalculator extends JFrame {
         liveLabel = new JLabel("", SwingConstants.CENTER);
         liveLabel.setFont(new Font("Segoe UI Emoji", Font.BOLD, 13));
         rc.gridy=4; resultCard.add(liveLabel, rc);
-
         // -- History card --
         JPanel histCard = makeCard();
         histCard.setLayout(new BorderLayout(0,10));
@@ -163,7 +162,6 @@ public class AgeCalculator extends JFrame {
         scroll.setBorder(BorderFactory.createEmptyBorder());
         scroll.setPreferredSize(new Dimension(0, 180));
         histCard.add(scroll, BorderLayout.CENTER);
-
         AnimatedButton deleteBtn = new AnimatedButton("🗑  Delete Selected");
         deleteBtn.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 12));
         deleteBtn.addActionListener(e -> deleteSelected());
@@ -176,9 +174,7 @@ public class AgeCalculator extends JFrame {
         centerWrapper.add(resultCard, gbc);
         gbc.weightx=1.0; gbc.gridx=0; gbc.gridy=1; gbc.gridwidth=2;
         centerWrapper.add(histCard, gbc);
-
         bgPanel.add(centerWrapper, BorderLayout.CENTER);
-
         // ─── STATUS BAR ───
         JPanel statusBar = new JPanel(new FlowLayout(FlowLayout.CENTER));
         statusBar.setOpaque(false);
