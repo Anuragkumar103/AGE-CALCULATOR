@@ -450,23 +450,19 @@ public class AgeCalculator extends JFrame {
                 if ((hovering && hoverAlpha >= 1f) || (!hovering && hoverAlpha <= 0f))
                     hoverTimer.stop();
             });
-
             addMouseListener(new MouseAdapter() {
                 public void mouseEntered(MouseEvent e) { hovering=true; hoverTimer.restart(); }
                 public void mouseExited(MouseEvent e)  { hovering=false; hoverTimer.restart(); }
             });
         }
-
         @Override
         protected void paintComponent(Graphics g) {
             Graphics2D g2 = (Graphics2D) g.create();
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             int w = getWidth(), h = getHeight();
-
             // Base fill
             g2.setColor(baseColor);
             g2.fillRoundRect(0, 0, w, h, 22, 22);
-
             // Hover glow
             if (hoverAlpha > 0) {
                 Color lighter = baseColor.brighter();
@@ -474,18 +470,15 @@ public class AgeCalculator extends JFrame {
                 g2.setColor(lighter);
                 g2.fillRoundRect(0, 0, w, h, 22, 22);
             }
-
             // Border shimmer
             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
             g2.setColor(new Color(255,255,255,80));
             g2.setStroke(new BasicStroke(1.5f));
             g2.drawRoundRect(1, 1, w-2, h-2, 20, 20);
-
             g2.dispose();
             super.paintComponent(g);
         }
     }
-
     // ── Entry point ───────────────────────────────────────────────────────────
     public static void main(String[] args) {
         // Set modern look
