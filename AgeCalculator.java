@@ -166,7 +166,6 @@ public class AgeCalculator extends JFrame {
         deleteBtn.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 12));
         deleteBtn.addActionListener(e -> deleteSelected());
         histCard.add(deleteBtn, BorderLayout.SOUTH);
-
         // Layout cards into center
         gbc.weightx=0.42; gbc.weighty=0.5; gbc.gridx=0; gbc.gridy=0;
         centerWrapper.add(inputCard, gbc);
